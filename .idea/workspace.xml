@@ -2,24 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6f644da-aeaf-451f-9be5-44910fea03fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/TimeOutTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/muitThread/MuitThreadOnXml.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter5/src/main/resources/muitThread.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/TimeOutTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/muitThread/MuitThreadOnXml.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter5/target/classes/muitThread.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aventstack_extentreports_3_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_48.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_relevantcodes_extentreports_2_41_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vimalselvam_testng_extentsreport_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_8_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_3_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_3_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_8_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/Chapter6.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/src/main/java/com/tester/extend/demo/ExtentTestNGIReporterListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/src/main/java/com/tester/extend/demo/TestMethodsDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/src/main/resources/testng.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/target/classes/META-INF/Chapter6.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/target/classes/com/tester/extend/demo/ExtentTestNGIReporterListener$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/target/classes/com/tester/extend/demo/ExtentTestNGIReporterListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/target/classes/com/tester/extend/demo/TestMethodsDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/target/classes/testng.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter7-mock/moco-runner-0.11.0-standalone.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter7-mock/startup1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter7-mock/startupGet.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter7-mock/startupPost.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter7-mock/startupWithCookies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter7-mock/startupWithHeader.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter7-mock/startupWithRedirect.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter7-mock/基本操作说明" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter9/Chapter9.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter9/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter9/src/main/java/com/course/httpclient/cookies/MyCookiesForGet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter9/src/main/java/com/course/httpclient/demo/MyHttpClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter9/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AutoTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AutoTest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_48.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_10.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/parameter/DataProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/parameter/DataProviderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/parameter/DataProviderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/parameter/DataProviderTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/Chapter5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter5/Chapter5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/BasicAnnotation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/DependTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/ExpectedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/IgnoreTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/TimeOutTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/groups/GroupOnClass1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/groups/GroupOnClass2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/groups/GroupOnClass3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/groups/GroupsOnMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/muitThread/MuitThreadOnXml.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/parameter/DataProviderTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/parameter/ParameterTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/suite/LoginTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/suite/PayTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/suite/SuiteConfig.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Chapter/target/" />
     <ignored path="$PROJECT_DIR$/Chapter5/target/" />
     <ignored path="$PROJECT_DIR$/Chapter6/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/Chapter9/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +85,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Chapter5/pom.xml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chapter9/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            <state relative-caret-position="26">
+              <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Chapter9/src/main/java/com/course/httpclient/cookies/MyCookiesForGet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="692">
+              <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,7 +138,6 @@
         <option value="$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/ExpectedException.java" />
         <option value="$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/DependTest.java" />
         <option value="$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/IgnoreTest.java" />
-        <option value="$PROJECT_DIR$/Chapter5/src/main/resources/suite.xml" />
         <option value="$PROJECT_DIR$/Chapter5/src/main/resources/Paramter.xml" />
         <option value="$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/paramter/ParamterTest.java" />
         <option value="$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/parameter/ParamterTest.java" />
@@ -85,8 +147,29 @@
         <option value="$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/muitThread/MuitThreadOnXml.java" />
         <option value="$PROJECT_DIR$/Chapter5/src/main/resources/muitThread.xml" />
         <option value="$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/TimeOutTest.java" />
+        <option value="$PROJECT_DIR$/Chapter6/src/main/java/test.java" />
+        <option value="$PROJECT_DIR$/Chapter6/src/main/java/com/vimalselvam/testng/listener/ExtentTestNgFormatter.java" />
         <option value="$PROJECT_DIR$/Chapter6/pom.xml" />
+        <option value="$PROJECT_DIR$/Chapter6/src/main/java/com/tester/extend/demo/ExtentTestNGIReporterListenerOld.java" />
+        <option value="$PROJECT_DIR$/Chapter6/src/main/resources/testng.xml" />
+        <option value="$PROJECT_DIR$/Chapter6/src/main/java/com/tester/extend/demo/ExtentTestNGIReporterListener.java" />
+        <option value="$PROJECT_DIR$/Chapter5/src/main/resources/suite.xml" />
+        <option value="$PROJECT_DIR$/Chapter6/src/main/java/com/tester/extend/demo/TestMethodsDemo.java" />
+        <option value="$PROJECT_DIR$/Chapter7/基本操作说明" />
+        <option value="$PROJECT_DIR$/Chapter7/startup1.json" />
+        <option value="$PROJECT_DIR$/Chapter7/startupGet.json" />
+        <option value="$PROJECT_DIR$/Chapter7/startupPost.json" />
+        <option value="$PROJECT_DIR$/Chapter7/startupWithCookies.json" />
+        <option value="$PROJECT_DIR$/Chapter7/startupWithHeader.json" />
+        <option value="$PROJECT_DIR$/Chapter7/startupWithRedirect.json" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/Chapter9/pom.xml" />
+        <option value="$PROJECT_DIR$/Chapter9/src/main/java/com/course/httpclient/demo/test.java" />
+        <option value="$PROJECT_DIR$/Chapter7-mock/startupWithHeader.json" />
+        <option value="$PROJECT_DIR$/Chapter9/src/main/java/com/course/httpclient/cookies/MyCookiesForGet.java" />
+        <option value="$PROJECT_DIR$/Chapter7-mock/startupWithCookies.json" />
+        <option value="$PROJECT_DIR$/Chapter9/src/main/java/com/course/httpclient/demo/MyHttpClient.java" />
+        <option value="$PROJECT_DIR$/Chapter9/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -98,8 +181,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="313" />
-    <option name="y" value="194" />
+    <option name="x" value="84" />
+    <option name="y" value="364" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -108,7 +191,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,13 +201,64 @@
             <path>
               <item name="AutoTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="AutoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter5" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter9" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoTest" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter9" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoTest" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter9" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoTest" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter9" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoTest" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter9" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoTest" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter9" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="cookies" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoTest" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter9" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="httpclient" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -139,16 +272,22 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Testing tools\muke\AutoTest" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Testing tools\muke\AutoTest\Chapter7" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -163,14 +302,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.TimeOutTest">
+  <component name="RunManager" selected="TestNG.MyHttpClient.test">
     <configuration name="testng-7.0.0-beta4.jar" type="JarApplication">
       <option name="JAR_PATH" value="$PROJECT_DIR$/lib/testng-7.0.0-beta4.jar" />
       <method v="2" />
     </configuration>
-    <configuration name="D:/Testing tools/muke/AutoTest/Chapter5/src/main/resources/muitThread.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chapter5" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/Chapter5/src/main/resources/muitThread.xml" />
+    <configuration name="D:/Testing tools/muke/AutoTest/Chapter6/src/main/resources/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chapter6" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/Chapter6/src/main/resources/testng.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -178,16 +317,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MuitThreadOnXml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chapter5" />
+    <configuration name="MyCookiesForGet" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chapter9" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.course.testng.muitThread.*" />
+          <option name="PATTERN" value="com.course.httpclient.cookies.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.course.testng.muitThread" />
-      <option name="MAIN_CLASS_NAME" value="com.course.testng.muitThread.MuitThreadOnXml" />
+      <option name="PACKAGE_NAME" value="com.course.httpclient.cookies" />
+      <option name="MAIN_CLASS_NAME" value="com.course.httpclient.cookies.MyCookiesForGet" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -195,53 +334,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimeOutTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chapter5" />
+    <configuration name="MyCookiesForGet.testGetCookies" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chapter9" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.course.testng.*" />
+          <option name="PATTERN" value="com.course.httpclient.cookies.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.course.testng" />
-      <option name="MAIN_CLASS_NAME" value="com.course.testng.TimeOutTest" />
+      <option name="PACKAGE_NAME" value="com.course.httpclient.cookies" />
+      <option name="MAIN_CLASS_NAME" value="com.course.httpclient.cookies.MyCookiesForGet" />
+      <option name="METHOD_NAME" value="testGetCookies" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyHttpClient.test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chapter9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.course.httpclient.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.course.httpclient.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.course.httpclient.demo.MyHttpClient" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMethodsDemo" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chapter6" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tester.extend.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tester.extend.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.tester.extend.demo.TestMethodsDemo" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TimeOutTest.testFailed" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chapter5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.course.testng.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.course.testng" />
-      <option name="MAIN_CLASS_NAME" value="com.course.testng.TimeOutTest" />
-      <option name="METHOD_NAME" value="testFailed" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TimeOutTest.testSuccess" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chapter5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.course.testng.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.course.testng" />
-      <option name="MAIN_CLASS_NAME" value="com.course.testng.TimeOutTest" />
-      <option name="METHOD_NAME" value="testSuccess" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -250,11 +389,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TimeOutTest" />
-        <item itemvalue="TestNG.TimeOutTest.testFailed" />
-        <item itemvalue="TestNG.TimeOutTest.testSuccess" />
-        <item itemvalue="TestNG.D:/Testing tools/muke/AutoTest/Chapter5/src/main/resources/muitThread.xml" />
-        <item itemvalue="TestNG.MuitThreadOnXml" />
+        <item itemvalue="TestNG.MyHttpClient.test" />
+        <item itemvalue="TestNG.MyCookiesForGet.testGetCookies" />
+        <item itemvalue="TestNG.MyCookiesForGet" />
+        <item itemvalue="TestNG.D:/Testing tools/muke/AutoTest/Chapter6/src/main/resources/testng.xml" />
+        <item itemvalue="TestNG.TestMethodsDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -275,48 +414,55 @@
       <workItem from="1558763600101" duration="2490000" />
       <workItem from="1558766118148" duration="84000" />
       <workItem from="1558766232335" duration="23820000" />
+      <workItem from="1559022684402" duration="729000" />
+      <workItem from="1559106171313" duration="9108000" />
+      <workItem from="1559193676457" duration="1790000" />
+      <workItem from="1559195507212" duration="12679000" />
+      <workItem from="1559538932758" duration="908000" />
+      <workItem from="1559539878630" duration="1966000" />
+      <workItem from="1559622462079" duration="7355000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="D__Testing_tools_muke_AutoTest_Chapter5_src_main_resources_muitThread_xml - 2019.05.28 at 13h 03m 17s.xml">
-      <configuration name="D:/Testing tools/muke/AutoTest/Chapter5/src/main/resources/muitThread.xml" configurationId="TestNG" />
+    <history-entry file="MyCookiesForGet - 2019.06.04 at 13h 32m 30s.xml">
+      <configuration name="MyCookiesForGet" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__Testing_tools_muke_AutoTest_Chapter5_src_main_resources_muitThread_xml - 2019.05.28 at 13h 15m 57s.xml">
-      <configuration name="D:/Testing tools/muke/AutoTest/Chapter5/src/main/resources/muitThread.xml" configurationId="TestNG" />
+    <history-entry file="MyCookiesForGet - 2019.06.04 at 13h 33m 01s.xml">
+      <configuration name="MyCookiesForGet" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__Testing_tools_muke_AutoTest_Chapter5_src_main_resources_muitThread_xml - 2019.05.28 at 13h 16m 13s.xml">
-      <configuration name="D:/Testing tools/muke/AutoTest/Chapter5/src/main/resources/muitThread.xml" configurationId="TestNG" />
+    <history-entry file="MyCookiesForGet_testGetCookies - 2019.06.04 at 13h 34m 07s.xml">
+      <configuration name="MyCookiesForGet.testGetCookies" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__Testing_tools_muke_AutoTest_Chapter5_src_main_resources_muitThread_xml - 2019.05.28 at 13h 16m 56s.xml">
-      <configuration name="D:/Testing tools/muke/AutoTest/Chapter5/src/main/resources/muitThread.xml" configurationId="TestNG" />
+    <history-entry file="MyCookiesForGet_testGetCookies - 2019.06.04 at 13h 34m 26s.xml">
+      <configuration name="MyCookiesForGet.testGetCookies" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TimeOutTest - 2019.05.28 at 13h 23m 01s.xml">
-      <configuration name="TimeOutTest" configurationId="TestNG" />
+    <history-entry file="MyCookiesForGet_testGetCookies - 2019.06.04 at 13h 42m 48s.xml">
+      <configuration name="MyCookiesForGet.testGetCookies" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TimeOutTest_testSuccess - 2019.05.28 at 13h 23m 18s.xml">
-      <configuration name="TimeOutTest.testSuccess" configurationId="TestNG" />
+    <history-entry file="MyCookiesForGet - 2019.06.04 at 13h 43m 37s.xml">
+      <configuration name="MyCookiesForGet" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TimeOutTest - 2019.05.28 at 13h 24m 09s.xml">
-      <configuration name="TimeOutTest" configurationId="TestNG" />
+    <history-entry file="MyCookiesForGet - 2019.06.04 at 13h 44m 22s.xml">
+      <configuration name="MyCookiesForGet" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TimeOutTest_testFailed - 2019.05.28 at 13h 24m 43s.xml">
-      <configuration name="TimeOutTest.testFailed" configurationId="TestNG" />
+    <history-entry file="MyCookiesForGet_testGetCookies - 2019.06.04 at 13h 45m 14s.xml">
+      <configuration name="MyCookiesForGet.testGetCookies" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TimeOutTest - 2019.05.28 at 13h 25m 24s.xml">
-      <configuration name="TimeOutTest" configurationId="TestNG" />
+    <history-entry file="MyCookiesForGet_testGetCookies - 2019.06.04 at 13h 45m 33s.xml">
+      <configuration name="MyCookiesForGet.testGetCookies" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TimeOutTest - 2019.05.28 at 13h 25m 47s.xml">
-      <configuration name="TimeOutTest" configurationId="TestNG" />
+    <history-entry file="MyHttpClient_test - 2019.06.04 at 14h 00m 52s.xml">
+      <configuration name="MyHttpClient.test" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32181000" />
+    <option name="totallyTimeSpent" value="66716000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19989339" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21748401" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -326,7 +472,7 @@
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32962137" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.24387528" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.26837417" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3997773" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -334,9 +480,9 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32962137" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32962137" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49840087" weight="0.3596882" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50159913" side_tool="true" weight="0.33853006" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.33184856" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -354,6 +500,13 @@
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/Chapter6/pom.xml">
+      <expanded value="true" />
+    </buildFile>
+  </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Deprecated.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -363,41 +516,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testhg/BasicAnnotation.java" />
-    <entry file="file://$PROJECT_DIR$/Chapter5/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter5/Chapter5.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_10.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter5/Chapter5.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/suite/LoginTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-          <folding>
-            <element signature="e#93#94#0" expanded="true" />
-            <element signature="e#129#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_10.xml" />
     <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/groups/GroupsOnMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -438,55 +557,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/groups/GroupOnClass1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" selection-start-line="6" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#91#92#0" expanded="true" />
-            <element signature="e#127#128#0" expanded="true" />
-            <element signature="e#175#176#0" expanded="true" />
-            <element signature="e#226#227#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/IgnoreTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="e#139#140#0" expanded="true" />
-            <element signature="e#189#190#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#378#379#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/ExpectedException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/suite/PayTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/suite/SuiteConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -524,13 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/DependTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
@@ -545,43 +612,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/BasicAnnotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/TimeOutTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Chapter5/src/main/resources/Parameter.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/resources/suite.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/resources/groupsOnClass.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -592,20 +626,233 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter6/pom.xml">
+    <entry file="file://$PROJECT_DIR$/Chapter6/src/main/java/test.java" />
+    <entry file="file://$PROJECT_DIR$/Chapter6/src/main/java/com/vimalselvam/testng/listener/ExtentTestNgFormatter.java" />
+    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/resources/suite.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/groups/GroupOnClass1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/resources/groupsOnClass.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/TimeOutTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/IgnoreTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/ExpectedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter6/test-output/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7-mock/startup1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7-mock/startupPost.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter6/Chapter6.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter5/target/classes/com/course/testng/BasicAnnotation.class" />
+    <entry file="file://$PROJECT_DIR$/Chapter6/src/main/java/com/tester/extend/demo/ExtentTestNGIReporterListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2666">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/BasicAnnotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter5/Chapter5.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="12" selection-end-column="33" />
+        <state relative-caret-position="312">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter6/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Chapter5/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        <state relative-caret-position="494">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter9/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/DependTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/suite/LoginTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter9/src/main/java/com/course/httpclient/demo/test.java" />
+    <entry file="file://$PROJECT_DIR$/Chapter6/src/main/java/com/tester/extend/demo/TestMethodsDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter6/src/main/resources/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7-mock/基本操作说明">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7-mock/startupWithRedirect.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7-mock/startupWithHeader.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7-mock/startupGet.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter5/src/main/java/com/course/testng/suite/SuiteConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7-mock/startupWithCookies.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter9/src/main/java/com/course/httpclient/demo/MyHttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="20" column="63" lean-forward="true" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter9/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter9/src/main/java/com/course/httpclient/cookies/MyCookiesForGet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -659,7 +906,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Chapter5</last-edited>
+          <last-edited>AutoTest</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
