@@ -1,12 +1,14 @@
 package com.course.httpclient.cookies;
 
 
+import org.apache.http.HttpResponse;
 import org.apache.http.client.CookieStore;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.cookie.Cookie;
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.testng.annotations.BeforeTest;
@@ -52,22 +54,22 @@ public class MyCookiesForGet {
         }
     }
 
-//    @Test(dependsOnMethods = {"testGetCookies"})
-//    public void testGetWithCookies() throws IOException {
-//        String uri = bundle.getString("test.get.with.cookies.uri");
-//        String testUrl = this.url+uri;
-//        HttpGet get = new HttpGet(testUrl);
-//        DefaultHttpClient client = new DefaultHttpClient();
-//
-//        //设置cookies信息
-//        client.setCookieStore(this.store);
-//        HttpResponse response = client.execute(get);
-//        //获取响应状态码
-//        int statusCode = response.getStatusLine().getStatusCode();
-//        System.out.println("statusCode = "+statusCode);
-//        if (statusCode == 200){
-//            String result = EntityUtils.toString(response.getEntity(),"UTF-8");
-//            System.out.println(result);
-//        }
-//    }
+    @Test(dependsOnMethods = {"testGetCookies"})
+    public void testGetWithCookies() throws IOException {
+        String uri = bundle.getString("test.get.with.cookies.uri");
+        String testUrl = this.url+uri;
+        HttpGet get = new HttpGet(testUrl);
+        DefaultHttpClient client = new DefaultHttpClient();
+
+        //设置cookies信息
+        client.setCookieStore(this.store);
+        HttpResponse response = client.execute(get);
+        //获取响应状态码
+        int statusCode = response.getStatusLine().getStatusCode();
+        System.out.println("statusCode = "+statusCode);
+        if (statusCode == 200){
+            String result = EntityUtils.toString(response.getEntity(),"UTF-8");
+            System.out.println(result);
+        }
+    }
 }

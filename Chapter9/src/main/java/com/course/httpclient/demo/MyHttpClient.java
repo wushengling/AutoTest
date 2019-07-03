@@ -25,4 +25,5 @@ public class MyHttpClient {
         result = EntityUtils.toString(response.getEntity(),"utf-8");
         System.out.println(result);
     }
+
 }

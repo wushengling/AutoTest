@@ -1,1 +1,2 @@
 java -jar ./moco-runner-0.11.0-standalone.jar http -p 9999 -c startup1.json
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 9999 -c startupWithCookies.json

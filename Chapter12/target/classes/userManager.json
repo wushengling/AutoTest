@@ -2,10 +2,10 @@
   {
     "description":"登陆接口,成功后返回cookies",
     "request":{
-      "uri":"/login",
+      "uri":"/v1/login",
       "method":"post",
       "json":{
-        "name":"zhangsan",
+        "userName":"zhangsan",
         "password":"123456"
       }
     },
@@ -19,7 +19,7 @@
   {
     "description":"获取用户信息接口",
     "request":{
-      "uri":"/getUserInfo",
+      "uri":"/v1/getUserInfo",
       "method":"post",
       "json":{
         "userId":"1"
@@ -43,7 +43,7 @@
   {
     "description":"获取用户信息接口",
     "request":{
-      "uri":"/getUserInfo",
+      "uri":"/v1/getUserInfo",
       "method":"post",
       "json":{
         "userId":"1"
@@ -67,7 +67,7 @@
   {
     "description":"获取用户信息接口",
     "request":{
-      "uri":"/getUserListInfo",
+      "uri":"/v1/getUserListInfo",
       "method":"post",
       "json":{
         "sex":"0"

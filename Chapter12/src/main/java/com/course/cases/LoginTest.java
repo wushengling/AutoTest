@@ -8,8 +8,7 @@ import com.course.utils.DatabaseUtil;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.BasicCookieStore;
-import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.json.JSONObject;
@@ -28,7 +27,7 @@ public class LoginTest {
         TestConfig.updateUserInfoUrl =ConfigFile.getUrl(InterfaceName.UPDATEUSERINFO);
         TestConfig.addUserUrl = ConfigFile.getUrl(InterfaceName.ADDUSER);
         TestConfig.loginUrl = ConfigFile.getUrl(InterfaceName.LOGIN);
-        TestConfig.httpClient = HttpClients.createDefault();
+        TestConfig.httpClient = new DefaultHttpClient();
     }
 
     @Test(groups = "loginTrue",description = "用户成功登录接口")
@@ -40,6 +39,8 @@ public class LoginTest {
 
         //下边的代码为写完接口的测试代码
         String result = getResult(loginCase);
+        System.out.println(loginCase.getExpected());
+        System.out.println(result);
         //处理结果，就是判断返回结果是否符合预期
         Assert.assertEquals(loginCase.getExpected(),result);
     }
@@ -76,8 +77,7 @@ public class LoginTest {
         //获取响应结果
         result = EntityUtils.toString(response.getEntity(),"utf-8");
         System.out.println(result);
-        TestConfig.store = new BasicCookieStore();
-
+        TestConfig.store = TestConfig.httpClient.getCookieStore();
         return result;
     }
 }
