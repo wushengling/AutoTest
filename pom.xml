@@ -23,6 +23,7 @@
         <module>Chapter11</module>
         <module>Chapter12</module>
         <module>test</module>
+        <module>Chapter13</module>
     </modules>
 
     <dependencies>
