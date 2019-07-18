@@ -63,7 +63,7 @@
     </select>
 
     <!--获取更新后的数据-->
-    <select id="updatedUserInfo" parameterType="com.course.model.UpdateUserInfoCase" resultType="com.course.model.User">
+    <select id="getUpdatedUserInfo" parameterType="com.course.model.UpdateUserInfoCase" resultType="com.course.model.User">
         select * from user
         <trim prefix="where" prefixOverrides="and">
             <if test="null != userName and '' != userName">

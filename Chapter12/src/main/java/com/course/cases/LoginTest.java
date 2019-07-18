@@ -54,6 +54,8 @@ public class LoginTest {
 
         //下边的代码为写完接口的测试代码
         String result = getResult(loginCase);
+        System.out.println(loginCase.getExpected());
+        System.out.println(result);
         //处理结果,就是判断返回结果是否符合预期
         Assert.assertEquals(loginCase.getExpected(),result);
 
@@ -66,7 +68,7 @@ public class LoginTest {
         param.put("userName",loginCase.getUserName());
         param.put("password",loginCase.getPassword());
         //设置请求头信息 设置header
-        post.setHeader("centent-type","application/json");
+        post.setHeader("content-type","application/json");
         //将参数信息添加到方法中
         StringEntity entity = new StringEntity(param.toString(),"utf-8");
         post.setEntity(entity);
@@ -77,6 +79,7 @@ public class LoginTest {
         //获取响应结果
         result = EntityUtils.toString(response.getEntity(),"utf-8");
         System.out.println(result);
+
         TestConfig.store = TestConfig.httpClient.getCookieStore();
         return result;
     }
