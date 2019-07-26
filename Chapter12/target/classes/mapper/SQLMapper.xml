@@ -4,7 +4,7 @@
 <mapper namespace="com.course.model">
     <!--获取登陆接口case-->
     <select id="loginCase" parameterType="Integer" resultType="com.course.model.LoginCase">
-        select * from  loginCase where id =#{id};
+        select * from  loginCase where id = #{id};
     </select>
 
     <!--添加用户接口case-->

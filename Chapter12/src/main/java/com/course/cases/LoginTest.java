@@ -35,7 +35,10 @@ public class LoginTest {
         SqlSession sqlSession = DatabaseUtil.getSqlSession();
         LoginCase loginCase = sqlSession.selectOne("loginCase",1);
         System.out.println(loginCase.toString());
+        System.out.println(loginCase.);
         System.out.println(TestConfig.loginUrl);
+
+
 
         //下边的代码为写完接口的测试代码
         String result = getResult(loginCase);
