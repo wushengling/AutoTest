@@ -35,10 +35,8 @@ public class LoginTest {
         SqlSession sqlSession = DatabaseUtil.getSqlSession();
         LoginCase loginCase = sqlSession.selectOne("loginCase",1);
         System.out.println(loginCase.toString());
-        System.out.println(loginCase.);
+        System.out.println(loginCase.getExpected());
         System.out.println(TestConfig.loginUrl);
-
-
 
         //下边的代码为写完接口的测试代码
         String result = getResult(loginCase);
@@ -84,6 +82,7 @@ public class LoginTest {
         System.out.println(result);
 
         TestConfig.store = TestConfig.httpClient.getCookieStore();
+        System.out.println(TestConfig.store);
         return result;
     }
 }

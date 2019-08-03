@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class AddUserTest {
-    @Test(dependsOnGroups = "addUser",description = "添加用户接口")
+    @Test(dependsOnGroups = "loginTrue",description = "添加用户接口")
     public void addUser() throws IOException, InterruptedException {
         SqlSession sqlSession = DatabaseUtil.getSqlSession();
         AddUserCase addUserCase = sqlSession.selectOne("addUserCase",1);
@@ -25,6 +25,8 @@ public class AddUserTest {
 
         //下边的代码为写完接口的测试代码
         String result = getResult(addUserCase);
+        System.out.println(addUserCase.getExpected());
+        System.out.println(result);
         /**
          * 可以先讲
          */

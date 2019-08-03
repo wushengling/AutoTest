@@ -20,7 +20,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class GetUserInfoTest {
-    @Test(dependsOnGroups = "getUserInfo",description = "获取userId为1的用户信息")
+    @Test(dependsOnGroups = "loginTrue",description = "获取userId为1的用户信息")
     public void getUserInfo() throws IOException, InterruptedException {
         SqlSession sqlSession = DatabaseUtil.getSqlSession();
         GetUserInfoCase getUserInfoCase = sqlSession.selectOne("getUserInfoCase",1);
@@ -29,11 +29,6 @@ public class GetUserInfoTest {
 
         //下边为写完接口的代码
         JSONArray resultJson = getJsonResult(getUserInfoCase);
-
-        /**
-         * 下边三行可以先讲
-         */
-        Thread.sleep(2000);
         User user = sqlSession.selectOne(getUserInfoCase.getExpected(),getUserInfoCase);
         System.out.println("自己查库获取用户信息:"+user.toString());
         List userList = new ArrayList();

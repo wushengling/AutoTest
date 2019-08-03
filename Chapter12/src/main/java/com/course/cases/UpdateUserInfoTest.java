@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class UpdateUserInfoTest {
-    @Test(dependsOnGroups = "updateUserInfo",description = "更改用户信息")
+    @Test(dependsOnGroups = "loginTrue",description = "更改用户信息")
     public void updateUserInfo() throws IOException, InterruptedException {
         SqlSession sqlSession = DatabaseUtil.getSqlSession();
         UpdateUserInfoCase updateUserInfoCase = sqlSession.selectOne("updateUserInfoCase",1);
@@ -37,7 +37,7 @@ public class UpdateUserInfoTest {
 
     }
 
-    @Test(dependsOnGroups = "deleteUser",description = "删除用户")
+    @Test(dependsOnGroups = "loginTrue",description = "删除用户")
     public void deleteUser() throws IOException, InterruptedException {
         SqlSession sqlSession = DatabaseUtil.getSqlSession();
         UpdateUserInfoCase updateUserInfoCase = sqlSession.selectOne("updateUserInfoCase",2);

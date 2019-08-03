@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class GetUserInfoListTest {
-    @Test(dependsOnGroups = "getUserListInfo",description = "获取性别为男的用户信息")
+    @Test(dependsOnGroups = "loginTrue",description = "获取性别为男的用户信息")
     public void getUserListInfo() throws IOException, InterruptedException {
         SqlSession sqlSession = DatabaseUtil.getSqlSession();
         GetUserListCase getUserListCase = sqlSession.selectOne("getUserListCase",1);
@@ -27,13 +27,10 @@ public class GetUserInfoListTest {
 
         //下边为写完接口的代码
         JSONArray resultJson = getJsonResult(getUserListCase);
-        /**
-         * 可以先讲
-         */
         Thread.sleep(2000);
         List<User> userList = sqlSession.selectList(getUserListCase.getExpected(),getUserListCase);
         for(User u : userList){
-            System.out.println("list获取的user:"+u.toString());
+            System.out.println("list获取的user:"+ u.toString());
         }
         JSONArray userListJson = new JSONArray(userList);
 
@@ -45,6 +42,8 @@ public class GetUserInfoListTest {
         }
 
     }
+
+
 
     private JSONArray getJsonResult(GetUserListCase getUserListCase) throws IOException {
         HttpPost post = new HttpPost(TestConfig.getUserListUrl);
