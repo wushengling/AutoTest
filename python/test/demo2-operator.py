@@ -39,7 +39,31 @@ print(a[3][2])
 #is not is 
 
 #位运算符
-#& | ^ << >>
+#&  按位与
+a = 100
+b = 11
+print(a&b)
 
+#|  按位或
+a = 100
+b = 11
+print(a|b)
+
+#^  按位异或
+
+#~  按位取反
+#<<  左移动
+#>>  右移动
+#把数字当做二进制数字进行运算
+
+
+
+# == 值判断  is id身份判断   type 类型判断
+#对象的三个特征  id \ value \ type
+a=1 
+# print(type(a) == int)
+b=isinstance(a,int)
+c=isinstance(a,(str,float))
+print(c)
 
 
