@@ -1,5 +1,4 @@
 #变量    名字
-from curses.has_key import python
 A = [1,2,3,4,5,6]
 B = [1,2,3]
 print(3*A+B+A)
