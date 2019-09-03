@@ -1,3 +1,9 @@
 {
-    "python.pythonPath": "D:\\Testing tools\\python\\python.exe"
+    "python.pythonPath": "D:\\Testing tools\\python\\python.exe",
+    "python.linting.pylintEnabled":false,
+    "python.linting.pylintArgs": [
+        "--disable=W,C,E"
+    ], //忽略指定报错
+   
+   "python.linting.enabled": true //关闭pylint 报错 （不包括语法错误）
 }
