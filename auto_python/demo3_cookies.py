@@ -23,3 +23,5 @@ print(r.json()['data']['token'])
 url1= "http://47.95.200.170/api/role/roleList?offset=0&limit=50"
 r1 = session.get(url=url1)
 print(r1.json())
+
+

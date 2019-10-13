@@ -1,4 +1,4 @@
-#coding:utf-8
+#coding:utf-8#coding:utf-8
 import requests
 from email.mime import application
 url = "http://192.168.1.238:9998/poipoi/main/content/newest"
