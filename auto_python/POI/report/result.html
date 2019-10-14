@@ -2,28 +2,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>测试报告</title>
-    <meta name="generator" content="HTMLTestRunner 0.8.3"/>
+    <title>接口测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.3"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     
 <style type="text/css" media="screen">
-body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 80%; }
 table       { font-size: 100%; }
-pre         { }
 
 /* -- heading ---------------------------------------------------------------------- */
-h1 {
-	font-size: 16pt;
-	color: gray;
-}
 .heading {
     margin-top: 0ex;
     margin-bottom: 1ex;
-}
-
-.heading .attribute {
-    margin-top: 1ex;
-    margin-bottom: 0;
 }
 
 .heading .description {
@@ -31,108 +24,35 @@ h1 {
     margin-bottom: 6ex;
 }
 
-/* -- css div popup ------------------------------------------------------------------------ */
-a.popup_link {
-}
-
-a.popup_link:hover {
-    color: red;
-}
-.img{
-	width: 50%;
-	height: 50%;
-	border-collapse: collapse;
-    border: 2px solid #777;
-}
-
-.screenshots {
-    z-index: 100;
-	position:absolute;
-	left: 20%;
-	top: 20%;
-	display: none;
-}
-.close_shots {
-	position:absolute;
-	top:0; left:48%;
-	z-index:99;
-	width:20px;
-}
-.popup_window {
-    display: none;
-    position: relative;
-    left: 0px;
-    top: 0px;
-    /*border: solid #627173 1px; */
-    padding: 10px;
-    background-color: #E6E6D6;
-    font-family: "Lucida Console", "Courier New", Courier, monospace;
-    text-align: left;
-    font-size: 8pt;
-    width: 500px;
-}
-
-}
 /* -- report ------------------------------------------------------------------------ */
-#show_detail_line {
-    margin-top: 3ex;
-    margin-bottom: 1ex;
-}
-#result_table {
-    width: 80%;
-    border-collapse: collapse;
-    border: 1px solid #777;
-}
-#header_row {
-    font-weight: bold;
-    color: white;
-    background-color: #777;
-}
-#result_table td {
-    border: 1px solid #777;
-    padding: 2px;
-}
 #total_row  { font-weight: bold; }
-.passClass  { background-color: #6c6; }
-.failClass  { background-color: #c60; }
-.errorClass { background-color: #c00; }
-.passCase   { color: #6c6; }
-.failCase   { color: #c60; font-weight: bold; }
-.errorCase  { color: #c00; font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
 .hiddenRow  { display: none; }
 .testcase   { margin-left: 2em; }
-
-
-/* -- ending ---------------------------------------------------------------------- */
-#ending {
-}
-
-
-.piechart{
-    position:absolute;  ;
-    top:20px;
-    left:300px;
-    width: 200px;
-    float: left;
-    display:  inline;
-}
-
-
 </style>
 
 </head>
-<body>
+<body >
 <script language="javascript" type="text/javascript">
 output_list = Array();
 
-/* level - 0:Summary; 1:Failed; 2:All */
+/*level 调整增加只显示通过用例的分类 --Adil
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:Error   // pt hiddenRow, ft none
+4:All     //pt none, ft none
+下面设置 按钮展开逻辑  --Yang Yao Jun
+*/
 function showCase(level) {
     trs = document.getElementsByTagName("tr");
     for (var i = 0; i < trs.length; i++) {
         tr = trs[i];
         id = tr.id;
         if (id.substr(0,2) == 'ft') {
-            if (level < 1) {
+            if (level == 2 || level == 0 ) {
                 tr.className = 'hiddenRow';
             }
             else {
@@ -140,22 +60,36 @@ function showCase(level) {
             }
         }
         if (id.substr(0,2) == 'pt') {
-            if (level > 1) {
-                tr.className = '';
+            if (level < 2 || level ==3 ) {
+                tr.className = 'hiddenRow';
             }
             else {
-                tr.className = 'hiddenRow';
+                tr.className = '';
             }
         }
     }
-}
 
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
 
 function showClassDetail(cid, count) {
     var id_list = Array(count);
     var toHide = 1;
     for (var i = 0; i < count; i++) {
-        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        //ID修改 点 为 下划线 -Findyou
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
         tid = 'f' + tid0;
         tr = document.getElementById(tid);
         if (!tr) {
@@ -169,30 +103,17 @@ function showClassDetail(cid, count) {
     }
     for (var i = 0; i < count; i++) {
         tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
         if (toHide) {
-            document.getElementById('div_'+tid).style.display = 'none'
             document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
         }
         else {
             document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
         }
     }
 }
-
-
-function showTestDetail(div_id){
-    var details_div = document.getElementById(div_id)
-    var displayState = details_div.style.display
-    // alert(displayState)
-    if (displayState != 'block' ) {
-        displayState = 'block'
-        details_div.style.display = 'block'
-    }
-    else {
-        details_div.style.display = 'none'
-    }
-}
-
 
 function html_escape(s) {
     s = s.replace(/&/g,'&amp;');
@@ -200,69 +121,27 @@ function html_escape(s) {
     s = s.replace(/>/g,'&gt;');
     return s;
 }
-
-function drawCircle(pass, fail, error){
-    var color = ["#6c6","#c60","#c00"];
-    var data = [pass,fail,error];
-    var text_arr = ["pass", "fail", "error"];
-
-    var canvas = document.getElementById("circle");
-    var ctx = canvas.getContext("2d");
-    var startPoint=0;
-    var width = 20, height = 10;
-    var posX = 112 * 2 + 20, posY = 30;
-    var textX = posX + width + 5, textY = posY + 10;
-    for(var i=0;i<data.length;i++){
-        ctx.fillStyle = color[i];
-        ctx.beginPath();
-        ctx.moveTo(112,84);
-        ctx.arc(112,84,84,startPoint,startPoint+Math.PI*2*(data[i]/(data[0]+data[1]+data[2])),false);
-        ctx.fill();
-        startPoint += Math.PI*2*(data[i]/(data[0]+data[1]+data[2]));
-        ctx.fillStyle = color[i];
-        ctx.fillRect(posX, posY + 20 * i, width, height);
-        ctx.moveTo(posX, posY + 20 * i);
-        ctx.font = 'bold 14px';
-        ctx.fillStyle = color[i];
-        var percent = text_arr[i] + ":"+data[i];
-        ctx.fillText(percent, textX, textY + 20 * i);
-
-    }
-}
-
-function show_shots(obj) {
-	obj.nextElementSibling.style.display="block";
-
-}
-
-function close_shots(obj) {
-	obj.parentElement.style.display="none";
-}
-
 </script>
-<div class="piechart">
-    <div>
-        <canvas id="circle" width="350" height="168" </canvas>
-    </div>
-</div>
 <div class='heading'>
-<h1>测试报告</h1>
-<p class='attribute'><strong>开始时间:</strong> 2019-10-13 17:14:39</p>
-<p class='attribute'><strong>耗时:</strong> 0:00:00.000501</p>
-<p class='attribute'><strong>状态:</strong> <span class="tj passCase">Pass</span>1 <span class="tj failCase">Failure</span>1</p>
+<h1 style="font-family: Microsoft YaHei">接口测试报告</h1>
+<p class='attribute'><strong>测试人员 : </strong> wu sheng ling</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-10-13 19:00:06</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.148897</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 2，通过 2，通过率= 100.00%</p>
 
 <p class='description'>POI模拟测试报告</p>
 </div>
 
 
 
-<p id='show_detail_line'>显示
-<a href='javascript:showCase(0)'>概要</a>
-<a href='javascript:showCase(1)'>失败</a>
-<a href='javascript:showCase(2)'>所有</a>
-</p>
-
-<table id='result_table'>
+    <p id='show_detail_line'>
+    <a class="btn btn-primary" href='javascript:showCase(0)'>通过率 [100.00% ]</a>
+    <a class="btn btn-success" href='javascript:showCase(2)'>通过[ 2 ]</a>
+    <a class="btn btn-warning" href='javascript:showCase(3)'>错误[ 0 ]</a>
+    <a class="btn btn-danger" href='javascript:showCase(1)'>失败[ 0 ]</a>
+    <a class="btn btn-info" href='javascript:showCase(4)'>所有[ 2 ]</a>
+    </p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
 <col align='left' />
 <col align='right' />
@@ -270,106 +149,80 @@ function close_shots(obj) {
 <col align='right' />
 <col align='right' />
 <col align='right' />
-<col align='right' />
 </colgroup>
-<tr id='header_row'>
-    <td>测试组/测试用例</td>
-    <td>总数</td>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
     <td>通过</td>
-    <td>失败</td>
     <td>错误</td>
-    <td>视图</td>
-    <td>错误截图</td>
+    <td>失败</td>
+    <td>详细</td>
 </tr>
 
-<tr class='failClass'>
-    <td>test_01.Test: 用例总和</td>
-    <td>2</td>
-    <td>1</td>
-    <td>1</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',2)">详情</a></td>
-    <td>&nbsp;</td>
+<tr class='passClass warning'>
+    <td>test_login.test_login: login测试集合</td>
+    <td class="text-center">2</td>
+    <td class="text-center">2</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',2)" class="detail" id='c1'>详细</a></td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td ><div class='testcase'>testAdd: 用例一</div></td>
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_fail: 验证码登录失败_验证码错误</div></td>
     <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
 
-    <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
-        通过</a></span>
-
-    <div id='div_pt1.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt1.1: 前置条件,每个用例都会先执行这个
-走登录流程,登录啦!!!
-test1
-后置,每次用例执行完,都会执行这个
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+pt1_1: {"status":10000013,"message":"验证码错误","data":null}
 
 
-        </pre>
+    </pre>
     </div>
-    <!--css div popup end-->
-
     </td>
-    <td></td>
 </tr>
 
-<tr id='ft1.2' class='none'>
-    <td ><div class='testcase'>testMultiply: 用例二</div></td>
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_pass: 验证码登录成功</div></td>
     <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse">  -->
 
-    <!--css div popup start-->
-    <span class='status failCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
-        失败</a></span>
-
-    <div id='div_ft1.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.2: 前置条件,每个用例都会先执行这个
-走登录流程,登录啦!!!
-后置,每次用例执行完,都会执行这个
-Traceback (most recent call last):
-  File "D:\Testing tools\muke\AutoTest\auto_python\POI\testcase\test_01.py", line 50, in testMultiply
-    self.assertEqual(c, 5)  # 期望结果是5,失败的用例
-AssertionError: 6 != 5
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+pt1_2: {"status":200,"message":"","data":{"userId":2000587,"role":0,"certification":false,"talent":false,"phone":"12000000001","nickname":"哈哈哈281","avatar":null,"gender":0,"address":"湖北省 武汉市","briefInfo":null,"identityTag":"&amp;","focusNumber":1,"fansNumber":1,"praiseNumber":25,"visitNum":1,"token":"e290583acfe24766a74ee919ced1b7b4","qqName":null,"wxName":null,"wbName":null,"firstLogin":false,"coins":0,"vote":false,"userRewardSettingInfoVo":{"contentRewardStatus":0,"closeDayNum":null,"endTime":null,"weekReportPushStatus":0},"battleEmptyNum":null}}
 
 
-        </pre>
+    </pre>
     </div>
-    <!--css div popup end-->
-
     </td>
-    <td></td>
 </tr>
 
-<tr id='total_row'>
-    <td>统计</td>
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
     <td>2</td>
-    <td>1</td>
-    <td>1</td>
+    <td>2</td>
     <td>0</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td>0</td>
+    <td>通过率：100.00%</td>
 </tr>
 </table>
-<script>
-    drawCircle(1, 1, 0)
-</script>
 
 <div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
 
 </body>
 </html>
