@@ -20,7 +20,7 @@ body_fail = {
 }
 
 class test_login(unittest.TestCase):
-    u'''login测试集合'''
+    u'''登录测试集合'''
     def setUp(self):
         # web端使用requests.session()
         # self.s = requests.session()
@@ -39,7 +39,7 @@ class test_login(unittest.TestCase):
         #打印结果
         print(result_fail.text)
         a = re.findall('"message":"(.+?)"',result_fail.text)
-        self.assertEqual(a[0],'验证码错误')
+        self.assertEqual(a[0],'验证码误')
 
         # #提取userId与token
         # userId_1 = re.findall('"userId":(.+?),',result.text)
