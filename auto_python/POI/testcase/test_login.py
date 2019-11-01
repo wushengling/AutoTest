@@ -30,8 +30,9 @@ class test_login(unittest.TestCase):
         result_pass = requests.post(url=url,headers=headers,json=body_pass)
         #打印结果
         print(result_pass.text)
+        #实际结果
         a = re.findall('"status":(.+?),',result_pass.text)
-
+        #实际结果与预期结果对比
         self.assertEqual(a[0],'200')
     def test_login_fail(self):
         u'''验证码登录失败_验证码错误'''
@@ -58,5 +59,5 @@ class test_login(unittest.TestCase):
         # print(result_info.content) 
 
 
-# if __name__ == '__main__':
-#     unittest.main()
+if __name__ == '__main__':
+    unittest.main()

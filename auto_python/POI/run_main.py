@@ -17,5 +17,6 @@ fp = open(reportPath,"wb")
 runner = HTMLTestRunner.HTMLTestRunner(fp,verbosity=2,title="接口测试报告",description="POI模拟测试报告")
 runner.run(discover)
 fp.close()
+
 if __name__ == '__main__':
     unittest.main()
