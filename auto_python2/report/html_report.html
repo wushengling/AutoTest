@@ -125,20 +125,20 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">接口测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> wu sheng ling</p>
-<p class='attribute'><strong>开始时间 : </strong> 2019-11-04 21:35:31</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.087120</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 2，通过 1，失败 1，通过率= 50.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-11-07 23:23:15</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.043626</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 2，通过 2，通过率= 100.00%</p>
 
-<p class='description'>POI模拟测试报告</p>
+<p class='description'>demo_POI接口测试报告</p>
 </div>
 
 
 
     <p id='show_detail_line'>
-    <a class="btn btn-primary" href='javascript:showCase(0)'>通过率 [50.00% ]</a>
-    <a class="btn btn-success" href='javascript:showCase(2)'>通过[ 1 ]</a>
+    <a class="btn btn-primary" href='javascript:showCase(0)'>通过率 [100.00% ]</a>
+    <a class="btn btn-success" href='javascript:showCase(2)'>通过[ 2 ]</a>
     <a class="btn btn-warning" href='javascript:showCase(3)'>错误[ 0 ]</a>
-    <a class="btn btn-danger" href='javascript:showCase(1)'>失败[ 1 ]</a>
+    <a class="btn btn-danger" href='javascript:showCase(1)'>失败[ 0 ]</a>
     <a class="btn btn-info" href='javascript:showCase(4)'>所有[ 2 ]</a>
     </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
@@ -159,70 +159,32 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='failClass warning'>
-    <td>test_login.test_login: 登录测试集合</td>
+<tr class='passClass warning'>
+    <td>TestMethod: demo</td>
     <td class="text-center">2</td>
-    <td class="text-center">1</td>
+    <td class="text-center">2</td>
     <td class="text-center">0</td>
-    <td class="text-center">1</td>
+    <td class="text-center">0</td>
     <td class="text-center"><a href="javascript:showClassDetail('c1',2)" class="detail" id='c1'>详细</a></td>
 </tr>
 
-<tr id='ft1_1' class='none'>
-    <td class='failCase'><div class='testcase'>test_login_fail: 验证码登录失败_验证码错误</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>失败</button>
-    <div id='div_ft1_1' class="collapse">  -->
-
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>失败</button>
-    <div id='div_ft1_1' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
-    <pre>
-    
-ft1_1: {"status":10000013,"message":"验证码错误","data":null}
-Traceback (most recent call last):
-  File "D:\Testing tools\muke\AutoTest\auto_python\POI\testcase\test_login.py", line 43, in test_login_fail
-    self.assertEqual(a[0],'验证码误')
-AssertionError: '验证码错误' != '验证码误'
-- 验证码错误
-?    -
-+ 验证码误
-
-
-
-    </pre>
-    </div>
-    </td>
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_01: 验证码登录接口</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
 </tr>
 
 <tr id='pt1_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_login_pass: 验证码登录成功</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
-    <div id='div_pt1_2' class="collapse">  -->
-
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
-    <div id='div_pt1_2' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
-    <pre>
-    
-pt1_2: {"status":200,"message":"","data":{"userId":2000587,"role":0,"certification":false,"talent":false,"phone":"12000000001","nickname":"哈哈哈281","avatar":null,"gender":0,"address":"湖北省 武汉市","briefInfo":null,"identityTag":"&amp;","focusNumber":1,"fansNumber":1,"praiseNumber":25,"visitNum":1,"token":"fcd4afd6536c4577aac43175a602ada1","qqName":null,"wxName":null,"wbName":null,"firstLogin":false,"coins":0,"vote":false,"userRewardSettingInfoVo":{"contentRewardStatus":0,"closeDayNum":null,"endTime":null,"weekReportPushStatus":0},"battleEmptyNum":null}}
-
-
-    </pre>
-    </div>
-    </td>
+    <td class='passCase'><div class='testcase'>test_02: 访问个人信息接口</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
 </tr>
 
 <tr id='total_row' class="text-center active">
     <td>总计</td>
     <td>2</td>
-    <td>1</td>
+    <td>2</td>
     <td>0</td>
-    <td>1</td>
-    <td>通过率：50.00%</td>
+    <td>0</td>
+    <td>通过率：100.00%</td>
 </tr>
 </table>
 

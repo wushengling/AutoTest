@@ -1,0 +1,12 @@
+{
+    "LoginTrue":{
+        "deviceType": 1,
+        "phone": "12000000001",
+        "verifyCode": "120000"
+        },
+    "LoginFalse":{
+        "deviceType": 1,
+        "phone": "12000000001",
+        "verifyCode": "123456"
+        }
+}
