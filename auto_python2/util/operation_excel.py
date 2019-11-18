@@ -1,5 +1,7 @@
 #coding:utf-8
 import xlrd
+import xlwt
+import xlutils
 '''
 # 设置excel路径
 path = "D:\\Testing tools\\muke\\AutoTest\\auto_python2\\dataconfig\\interface.xlsx"
@@ -40,6 +42,10 @@ class OperationExcel:
     #获取某一个单元格的内容
     def get_value(self,row,col):
         return self.data.cell_value(row,col)
+    #写入数据
+    def write_value(self,row,col):
+        read = xlrd.open_workbook(self.file_name)
+
         
         
 if __name__ == '__main__':

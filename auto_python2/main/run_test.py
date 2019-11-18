@@ -8,11 +8,13 @@ rootPath = os.path.split(curPath)[0]
 sys.path.append(rootPath)
 from base.run_method import RunMethod
 from data.get_data import GetData
+from util.common import CommonUtil 
 
 class RunTest:
     def __init__(self):
         self.run_method = RunMethod()
         self.data = GetData()
+        self.common = CommonUtil()
     #执行程序的主入口
     def go_on_run(self):
         res =None
@@ -24,9 +26,14 @@ class RunTest:
             data = self.data.get_data_for_json(i)
             header = self.data.is_header(i)
             name = self.data.get_name(i)
+            expect = self.data.get_expect(i)
             if is_run :
                 res = self.run_method.run_main(method,url,data,header)
-                print(name+'\n'+json.dumps(res.json(),indent=2,ensure_ascii=False))
+                if self.common.is_contain(expect,json.dumps(res.json(),indent=2,ensure_ascii=False)):
+                    print("测试通过")
+                else:
+                    print("测试失败")
+                # print(json.dumps(res.json(),indent=2,ensure_ascii=False))
 
 if __name__ == "__main__":
     a = RunTest()

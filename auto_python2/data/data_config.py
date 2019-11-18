@@ -53,9 +53,6 @@ def get_data():
 #获取预期结果
 def get_expect():
     return global_var.expect
-#获取实际结果
-def get_result():
-    return global_var.result
     
 if __name__ == "__main__":
     print(type(get_request_way()))
