@@ -1,12 +1,14 @@
 {
     "LoginTrue":{
-        "deviceType": 1,
-        "phone": "12000000001",
-        "verifyCode": "120000"
-        },
+        "login_type":"phone",
+        "phone":"15527553259",
+        "sms_code":"1234"
+    },
     "LoginFalse":{
-        "deviceType": 1,
-        "phone": "12000000001",
-        "verifyCode": "123456"
-        }
+        "login_type":"phone",
+        "phone":"15527553259",
+        "sms_code":"12345"
+    },
+    "demo":{
+    }
 }

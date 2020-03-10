@@ -1,0 +1,22 @@
+2020-03-09 15:02:20,987 - [test_login.py-->line:40] - INFO:用例:登录成功,执行通过
+2020-03-09 15:02:21,306 - [test_login.py-->line:40] - INFO:用例:用户名为空,执行通过
+2020-03-09 15:02:21,572 - [test_login.py-->line:33] - ERROR:用例:密码为空,执行未通过
+2020-03-09 15:02:21,573 - [test_login.py-->line:35] - ERROR:{'code': 1, 'msg': '所有的参数不能为空111'} != {'code': 1, 'msg': '所有的参数不能为空'}
+- {'code': 1, 'msg': '所有的参数不能为空111'}
+?                              ---
+
++ {'code': 1, 'msg': '所有的参数不能为空'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python3\testcases\test_login.py", line 30, in test_login
+    self.assertEqual(expected,res)
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\python3\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 1, 'msg': '所有的参数不能为空111'} != {'code': 1, 'msg': '所有的参数不能为空'}
+- {'code': 1, 'msg': '所有的参数不能为空111'}
+?                              ---
+
++ {'code': 1, 'msg': '所有的参数不能为空'}

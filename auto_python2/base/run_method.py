@@ -2,13 +2,14 @@
 import requests
 class RunMethod:
     def __init__(self):
-        self.host = "http://192.168.1.238:9998"
+        # self.host = "http://192.168.1.238:9998"
+        self.host = "http://am.frp.woofer.ga:1080"
     def get_main(self,url,data=None,header=None):
         res =None
         if header != None:
-            res = requests.get(url=self.host+url,json=data,headers=header)
+            res = requests.get(url=self.host+url,params=data,headers=header)
         else:
-            res = requests.get(url=self.host+url,headers=header,json=data)
+            res = requests.get(url=self.host+url,params=data,json=data)
         return res
 
     def post_main(self,url,data=None,header=None):

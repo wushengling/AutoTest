@@ -1,0 +1,15 @@
+2020-03-06 14:09:51,345 - [03日志轮转.py-->line:35] - DEBUG:这个是debug等级的日志
+2020-03-06 14:09:51,349 - [03日志轮转.py-->line:36] - INFO:这个是info等级的日志
+2020-03-06 14:09:51,349 - [03日志轮转.py-->line:37] - WARNING:这个是warning等级的日志
+2020-03-06 14:09:51,349 - [03日志轮转.py-->line:38] - ERROR:这个是error等级的日志
+2020-03-06 14:09:51,350 - [03日志轮转.py-->line:39] - CRITICAL:这个是critical等级的日志
+2020-03-06 14:36:06,493 - [handlelog.py-->line:29] - INFO:12123
+2020-03-06 14:36:17,862 - [handlelog.py-->line:29] - INFO:12123
+2020-03-06 16:39:47,090 - [testcase_ddt.py-->line:41] - ERROR:未通过
+2020-03-06 16:40:16,485 - [testcase_ddt.py-->line:41] - ERROR:未通过
+2020-03-06 16:41:12,707 - [testcase_ddt.py-->line:46] - DEBUG:测试通过
+2020-03-06 16:41:12,772 - [testcase_ddt.py-->line:46] - DEBUG:测试通过
+2020-03-06 16:41:12,832 - [testcase_ddt.py-->line:41] - ERROR:测试未通过
+2020-03-07 14:00:52,461 - [testcase_ddt.py-->line:46] - INFO:用例:登录成功,测试通过
+2020-03-07 14:00:52,655 - [testcase_ddt.py-->line:46] - INFO:用例:用户名为空,测试通过
+2020-03-07 14:00:52,889 - [testcase_ddt.py-->line:41] - ERROR:用例:密码为空,测试未通过

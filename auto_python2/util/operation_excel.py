@@ -1,10 +1,10 @@
 #coding:utf-8
 import xlrd
 import xlwt
-import xlutils
+from xlutils.copy import copy
 '''
 # 设置excel路径
-path = "D:\\Testing tools\\muke\\AutoTest\\auto_python2\\dataconfig\\interface.xlsx"
+path = "C:\\wsl\\AutoTest\\auto_python2\\dataconfig\\interface.xlsx"
 
 # 打开excel
 data = xlrd.open_workbook(path)
@@ -28,7 +28,7 @@ class OperationExcel:
             self.file_name = file_name        
             self.sheet_id = sheet_id
         else:
-            self.file_name = "D:\\Testing tools\\muke\\AutoTest\\auto_python2\\dataconfig\\interface.xlsx"
+            self.file_name = "C:\\wsl\\AutoTest\\auto_python2\\dataconfig\\interface.xlsx"
             self.sheet_id = 0
         self.data = self.get_data()
     #获取sheets的内容
@@ -43,8 +43,43 @@ class OperationExcel:
     def get_value(self,row,col):
         return self.data.cell_value(row,col)
     #写入数据
-    def write_value(self,row,col):
-        read = xlrd.open_workbook(self.file_name)
+    def write_value(self,row,col,value):
+        '''
+        写入excel数据
+        row（行），col（列），value（值）
+        '''
+        read_data = xlrd.open_workbook(self.file_name)
+        write_data = copy(read_data)
+        sheet_data = write_data.get_sheet(self.sheet_id)
+        sheet_data.write(row,col,value)
+        write_data.save(self.file_name)
+    #获取某一列的内容
+    def get_cols_data(self,col_id = None):
+        if col_id != None:
+            cols_data = self.data.col_values(col_id)
+        else:
+            cols_data = self.data.col_values(0)
+        return cols_data
+    #根据对应的case_id 找到对应的行号
+    def get_row_num(self,case_id):
+        num = 0
+        cols_data = self.get_cols_data()
+        for col_data in cols_data:
+            if case_id == col_data:
+                return num
+            num = num + 1
+    #根据行号，找到该行的内容
+    def get_row_value(self,row):
+        tables = self.data
+        row_data = tables.get_value(row)
+        return row_data
+    #根据对应的case_id 找到对应行的内容
+    def get_rows_data(self,case_id):
+        row_num = self.get_row_num(case_id)
+        rows_data = self.get_row_value(row_num)
+        return rows_data
+        
+        
 
         
         

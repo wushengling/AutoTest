@@ -41,7 +41,7 @@ def get_header_value():
 #获取依赖id
 def get_id_depend():
     return global_var.id_depend
-#获取依赖数据
+#获取依赖的返回数据
 def get_data_depend():
     return global_var.data_depend
 #获取依赖数据所需字段
@@ -53,6 +53,9 @@ def get_data():
 #获取预期结果
 def get_expect():
     return global_var.expect
+#获取执行结果
+def get_result():
+    return global_var.result
     
 if __name__ == "__main__":
     print(type(get_request_way()))

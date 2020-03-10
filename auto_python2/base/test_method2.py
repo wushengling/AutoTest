@@ -47,7 +47,7 @@ if __name__ == "__main__":
     # unittest.main()
 
     #报告地址
-    filepath = "D:\\Testing tools\\muke\\AutoTest\\auto_python2\\report\\html_report.html"
+    filepath = "C:\\wsl\\AutoTest\\\\auto_python2\\report\\html_report.html"
     fp = open(filepath,'wb')
     #创建容器,进行运行
     suite = unittest.TestSuite()

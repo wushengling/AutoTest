@@ -125,9 +125,9 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">接口测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> wu sheng ling</p>
-<p class='attribute'><strong>开始时间 : </strong> 2019-11-07 23:23:15</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.043626</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 2，通过 2，通过率= 100.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-01-30 16:29:53</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:21.055897</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 2，错误 2，通过率= 0.00%</p>
 
 <p class='description'>demo_POI接口测试报告</p>
 </div>
@@ -135,9 +135,9 @@ function html_escape(s) {
 
 
     <p id='show_detail_line'>
-    <a class="btn btn-primary" href='javascript:showCase(0)'>通过率 [100.00% ]</a>
-    <a class="btn btn-success" href='javascript:showCase(2)'>通过[ 2 ]</a>
-    <a class="btn btn-warning" href='javascript:showCase(3)'>错误[ 0 ]</a>
+    <a class="btn btn-primary" href='javascript:showCase(0)'>通过率 [0.00% ]</a>
+    <a class="btn btn-success" href='javascript:showCase(2)'>通过[ 0 ]</a>
+    <a class="btn btn-warning" href='javascript:showCase(3)'>错误[ 2 ]</a>
     <a class="btn btn-danger" href='javascript:showCase(1)'>失败[ 0 ]</a>
     <a class="btn btn-info" href='javascript:showCase(4)'>所有[ 2 ]</a>
     </p>
@@ -159,32 +159,127 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='passClass warning'>
+<tr class='errorClass warning'>
     <td>TestMethod: demo</td>
     <td class="text-center">2</td>
-    <td class="text-center">2</td>
     <td class="text-center">0</td>
+    <td class="text-center">2</td>
     <td class="text-center">0</td>
     <td class="text-center"><a href="javascript:showClassDetail('c1',2)" class="detail" id='c1'>详细</a></td>
 </tr>
 
-<tr id='pt1_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_01: 验证码登录接口</div></td>
-    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+<tr id='ft1_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_01: 验证码登录接口</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
+    <div id='div_ft1_1' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
+    <div id='div_ft1_1' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft1_1: Traceback (most recent call last):
+  File "C:\python3\lib\site-packages\urllib3\connection.py", line 156, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python3\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "C:\python3\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python3\lib\site-packages\urllib3\connectionpool.py", line 665, in urlopen
+    httplib_response = self._make_request(
+  File "C:\python3\lib\site-packages\urllib3\connectionpool.py", line 387, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\python3\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\python3\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\python3\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\python3\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\python3\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\python3\lib\site-packages\urllib3\connection.py", line 184, in connect
+    conn = self._new_conn()
+  File "C:\python3\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x033D7F28&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python3\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\python3\lib\site-packages\urllib3\connectionpool.py", line 719, in urlopen
+    retries = retries.increment(
+  File "C:\python3\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.238', port=9998): Max retries exceeded with url: /poipoi/users/login/phone (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x033D7F28&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python2\base\test_method2.py", line 24, in test_01
+    res = self.run.run_main('POST',url,headers,body)
+  File "c:\wsl\AutoTest\auto_python2\base\demo1.py", line 25, in run_main
+    res = self.api_post(url,headers,body)
+  File "c:\wsl\AutoTest\auto_python2\base\demo1.py", line 16, in api_post
+    res = requests.post(url=url,headers=headers,json=body) #.json()
+  File "C:\python3\lib\site-packages\requests\api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\python3\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\python3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\python3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\python3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.238', port=9998): Max retries exceeded with url: /poipoi/users/login/phone (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x033D7F28&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+
+    </pre>
+    </div>
+    </td>
 </tr>
 
-<tr id='pt1_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_02: 访问个人信息接口</div></td>
-    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+<tr id='ft1_2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_02: 访问个人信息接口</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
+    <div id='div_ft1_2' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
+    <div id='div_ft1_2' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft1_2: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python2\base\test_method2.py", line 39, in test_02
+    'userId':userId,
+NameError: name 'userId' is not defined
+
+
+    </pre>
+    </div>
+    </td>
 </tr>
 
 <tr id='total_row' class="text-center active">
     <td>总计</td>
     <td>2</td>
+    <td>0</td>
     <td>2</td>
     <td>0</td>
-    <td>0</td>
-    <td>通过率：100.00%</td>
+    <td>通过率：0.00%</td>
 </tr>
 </table>
 
