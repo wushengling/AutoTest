@@ -2,11 +2,16 @@
     "cSpell.words": [
         "CAESDIR",
         "TMPL",
+        "addrs",
+        "connectdb",
         "datas",
         "handlerequset",
         "jiekou",
         "myconfig",
         "openpyxl",
+        "pymysql",
+        "pynput",
+        "requset",
         "sheng"
     ]
 }

@@ -1,5 +1,6 @@
 #coding:utf-8
 import requests
+import json
 
 #使用cookie+session鉴权
 #使用requests中的session对象来发送请求
@@ -17,7 +18,10 @@ headers = {
 }
 res = requests.post(url=url,headers=headers,json=data)
 data = res.json()
-print(data,type(data))
+a = res.content
+b = json.loads(res.text)
+print(b,type(b))
+print(b['data']['token_info'])
 token_type = data["data"]["token_info"]["token_type"]
 token = data["data"]["token_info"]["token"]
 token_value = token_type+" "+token

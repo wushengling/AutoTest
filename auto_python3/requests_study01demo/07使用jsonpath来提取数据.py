@@ -3,6 +3,11 @@ import requests
 import jsonpath
 """
 jsonpath     描述
+ $          根节点
+ .or[]      取子节点
+ ..         子孙节点
+ *          匹配所有元素节点
+ []         如数组下标,根据内容选值等
 
 """
 #登录
@@ -24,3 +29,7 @@ print(token_type)
 print(token)
 print(reg_name)
 print(code)
+
+#扩展
+# json.loads()  将字符串中的json,转换为对应的python字典
+# json.dumps()  将python中的字典,转化为对应的json字符串
