@@ -1,0 +1,1253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>接口测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.3"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 80%; }
+table       { font-size: 100%; }
+
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+output_list = Array();
+
+/*level 调整增加只显示通过用例的分类 --Adil
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:Error   // pt hiddenRow, ft none
+4:All     //pt none, ft none
+下面设置 按钮展开逻辑  --Yang Yao Jun
+*/
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2 || level ==3 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        //ID修改 点 为 下划线 -Findyou
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">接口测试报告</h1>
+<p class='attribute'><strong>测试人员 : </strong> wu sheng ling</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-04-19 16:38:49</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:12.742387</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 52，通过 17，失败 18，错误 17，通过率= 32.69%</p>
+
+<p class='description'>无</p>
+</div>
+
+
+
+    <p id='show_detail_line'>
+    <a class="btn btn-primary" href='javascript:showCase(0)'>通过率 [32.69% ]</a>
+    <a class="btn btn-success" href='javascript:showCase(2)'>通过[ 17 ]</a>
+    <a class="btn btn-warning" href='javascript:showCase(3)'>错误[ 17 ]</a>
+    <a class="btn btn-danger" href='javascript:showCase(1)'>失败[ 18 ]</a>
+    <a class="btn btn-info" href='javascript:showCase(4)'>所有[ 52 ]</a>
+    </p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>错误</td>
+    <td>失败</td>
+    <td>详细</td>
+</tr>
+
+<tr class='errorClass warning'>
+    <td>test_add.TestAdd</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',1)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='ft1_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_add</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
+    <div id='div_ft1_1' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
+    <div id='div_ft1_1' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft1_1: TypeError: test_add() missing 1 required positional argument: 'case'
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='errorClass warning'>
+    <td>test_audit.TestAudit</td>
+    <td class="text-center">8</td>
+    <td class="text-center">0</td>
+    <td class="text-center">8</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',8)" class="detail" id='c2'>详细</a></td>
+</tr>
+
+<tr id='ft2_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_audit_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_1'>错误</button>
+    <div id='div_ft2_1' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_1'>错误</button>
+    <div id='div_ft2_1' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft2_1: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_audit.py", line 58, in setUp
+    CaseData.loan_id = str(jsonpath.jsonpath(res,"$..id")[0])
+TypeError: 'bool' object is not subscriptable
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft2_2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_audit_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft2_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_2'>错误</button>
+    <div id='div_ft2_2' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft2_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_2'>错误</button>
+    <div id='div_ft2_2' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft2_2: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_audit.py", line 58, in setUp
+    CaseData.loan_id = str(jsonpath.jsonpath(res,"$..id")[0])
+TypeError: 'bool' object is not subscriptable
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft2_3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_audit_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft2_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_3'>错误</button>
+    <div id='div_ft2_3' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft2_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_3'>错误</button>
+    <div id='div_ft2_3' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft2_3: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_audit.py", line 58, in setUp
+    CaseData.loan_id = str(jsonpath.jsonpath(res,"$..id")[0])
+TypeError: 'bool' object is not subscriptable
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft2_4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_audit_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft2_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_4'>错误</button>
+    <div id='div_ft2_4' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft2_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_4'>错误</button>
+    <div id='div_ft2_4' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft2_4: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_audit.py", line 58, in setUp
+    CaseData.loan_id = str(jsonpath.jsonpath(res,"$..id")[0])
+TypeError: 'bool' object is not subscriptable
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft2_5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_audit_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft2_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_5'>错误</button>
+    <div id='div_ft2_5' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft2_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_5'>错误</button>
+    <div id='div_ft2_5' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft2_5: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_audit.py", line 58, in setUp
+    CaseData.loan_id = str(jsonpath.jsonpath(res,"$..id")[0])
+TypeError: 'bool' object is not subscriptable
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft2_6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_audit_6</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft2_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_6'>错误</button>
+    <div id='div_ft2_6' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft2_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_6'>错误</button>
+    <div id='div_ft2_6' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft2_6: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_audit.py", line 58, in setUp
+    CaseData.loan_id = str(jsonpath.jsonpath(res,"$..id")[0])
+TypeError: 'bool' object is not subscriptable
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft2_7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_audit_7</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft2_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_7'>错误</button>
+    <div id='div_ft2_7' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft2_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_7'>错误</button>
+    <div id='div_ft2_7' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft2_7: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_audit.py", line 58, in setUp
+    CaseData.loan_id = str(jsonpath.jsonpath(res,"$..id")[0])
+TypeError: 'bool' object is not subscriptable
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft2_8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_audit_8</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft2_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_8'>错误</button>
+    <div id='div_ft2_8' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft2_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_8'>错误</button>
+    <div id='div_ft2_8' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft2_8: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_audit.py", line 58, in setUp
+    CaseData.loan_id = str(jsonpath.jsonpath(res,"$..id")[0])
+TypeError: 'bool' object is not subscriptable
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='errorClass warning'>
+    <td>test_invest.TestInvest</td>
+    <td class="text-center">8</td>
+    <td class="text-center">0</td>
+    <td class="text-center">8</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c3',8)" class="detail" id='c3'>详细</a></td>
+</tr>
+
+<tr id='ft3_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_invest_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft3_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft3_1'>错误</button>
+    <div id='div_ft3_1' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft3_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft3_1'>错误</button>
+    <div id='div_ft3_1' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft3_1: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_invest.py", line 40, in test_invest
+    url = conf.get("env","base_url")+case["url"]
+TypeError: can only concatenate str (not "NoneType") to str
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft3_2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_invest_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft3_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft3_2'>错误</button>
+    <div id='div_ft3_2' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft3_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft3_2'>错误</button>
+    <div id='div_ft3_2' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft3_2: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_invest.py", line 40, in test_invest
+    url = conf.get("env","base_url")+case["url"]
+TypeError: can only concatenate str (not "NoneType") to str
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft3_3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_invest_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft3_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft3_3'>错误</button>
+    <div id='div_ft3_3' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft3_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft3_3'>错误</button>
+    <div id='div_ft3_3' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft3_3: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_invest.py", line 40, in test_invest
+    url = conf.get("env","base_url")+case["url"]
+TypeError: can only concatenate str (not "NoneType") to str
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft3_4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_invest_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft3_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft3_4'>错误</button>
+    <div id='div_ft3_4' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft3_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft3_4'>错误</button>
+    <div id='div_ft3_4' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft3_4: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_invest.py", line 40, in test_invest
+    url = conf.get("env","base_url")+case["url"]
+TypeError: can only concatenate str (not "NoneType") to str
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft3_5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_invest_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft3_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft3_5'>错误</button>
+    <div id='div_ft3_5' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft3_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft3_5'>错误</button>
+    <div id='div_ft3_5' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft3_5: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_invest.py", line 40, in test_invest
+    url = conf.get("env","base_url")+case["url"]
+TypeError: can only concatenate str (not "NoneType") to str
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft3_6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_invest_6</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft3_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft3_6'>错误</button>
+    <div id='div_ft3_6' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft3_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft3_6'>错误</button>
+    <div id='div_ft3_6' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft3_6: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_invest.py", line 40, in test_invest
+    url = conf.get("env","base_url")+case["url"]
+TypeError: can only concatenate str (not "NoneType") to str
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft3_7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_invest_7</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft3_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft3_7'>错误</button>
+    <div id='div_ft3_7' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft3_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft3_7'>错误</button>
+    <div id='div_ft3_7' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft3_7: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_invest.py", line 40, in test_invest
+    url = conf.get("env","base_url")+case["url"]
+TypeError: can only concatenate str (not "NoneType") to str
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft3_8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_invest_8</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft3_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft3_8'>错误</button>
+    <div id='div_ft3_8' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft3_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft3_8'>错误</button>
+    <div id='div_ft3_8' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft3_8: Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_invest.py", line 40, in test_invest
+    url = conf.get("env","base_url")+case["url"]
+TypeError: can only concatenate str (not "NoneType") to str
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='failClass warning'>
+    <td>test_recharge.TestRecharge</td>
+    <td class="text-center">8</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center">8</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c4',8)" class="detail" id='c4'>详细</a></td>
+</tr>
+
+<tr id='ft4_1' class='none'>
+    <td class='failCase'><div class='testcase'>test_recharge_1: 充值成功</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft4_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft4_1'>失败</button>
+    <div id='div_ft4_1' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft4_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft4_1'>失败</button>
+    <div id='div_ft4_1' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft4_1: 预期结果:  {'code': 0, 'msg': 'OK'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 83, in test_recharge
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 0 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft4_2' class='none'>
+    <td class='failCase'><div class='testcase'>test_recharge_2: 充值不成功-MemberId为空</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft4_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft4_2'>失败</button>
+    <div id='div_ft4_2' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft4_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft4_2'>失败</button>
+    <div id='div_ft4_2' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft4_2: 预期结果:  {'code': 1, 'msg': '用户id为空'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 83, in test_recharge
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 1 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft4_3' class='none'>
+    <td class='failCase'><div class='testcase'>test_recharge_3: 充值不成功-Amount为空</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft4_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft4_3'>失败</button>
+    <div id='div_ft4_3' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft4_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft4_3'>失败</button>
+    <div id='div_ft4_3' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft4_3: 预期结果:  {'code': 1, 'msg': '余额为空'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 83, in test_recharge
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 1 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft4_4' class='none'>
+    <td class='failCase'><div class='testcase'>test_recharge_4: 充值不成功-Amount为负值</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft4_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft4_4'>失败</button>
+    <div id='div_ft4_4' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft4_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft4_4'>失败</button>
+    <div id='div_ft4_4' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft4_4: 预期结果:  {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 83, in test_recharge
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 2 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft4_5' class='none'>
+    <td class='failCase'><div class='testcase'>test_recharge_5: 充值不成功-Amount大于500000</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft4_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft4_5'>失败</button>
+    <div id='div_ft4_5' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft4_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft4_5'>失败</button>
+    <div id='div_ft4_5' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft4_5: 预期结果:  {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 83, in test_recharge
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 2 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft4_6' class='none'>
+    <td class='failCase'><div class='testcase'>test_recharge_6: 充值不成功-Amount的小数位数多于2位</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft4_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft4_6'>失败</button>
+    <div id='div_ft4_6' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft4_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft4_6'>失败</button>
+    <div id='div_ft4_6' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft4_6: 预期结果:  {'code': 2, 'msg': '余额小数超过两位'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 83, in test_recharge
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 2 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft4_7' class='none'>
+    <td class='failCase'><div class='testcase'>test_recharge_7: 充值成功-Amount的小数位数1位</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft4_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft4_7'>失败</button>
+    <div id='div_ft4_7' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft4_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft4_7'>失败</button>
+    <div id='div_ft4_7' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft4_7: 预期结果:  {'code': 0, 'msg': 'OK'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 83, in test_recharge
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 0 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft4_8' class='none'>
+    <td class='failCase'><div class='testcase'>test_recharge_8: 充值成功-Amount的小数位数2位</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft4_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft4_8'>失败</button>
+    <div id='div_ft4_8' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft4_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft4_8'>失败</button>
+    <div id='div_ft4_8' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft4_8: 预期结果:  {'code': 0, 'msg': 'OK'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 83, in test_recharge
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 0 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='failClass warning'>
+    <td>test_register.TestLogin</td>
+    <td class="text-center">6</td>
+    <td class="text-center">4</td>
+    <td class="text-center">0</td>
+    <td class="text-center">2</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c5',6)" class="detail" id='c5'>详细</a></td>
+</tr>
+
+<tr id='pt5_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_1: 登录成功</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='ft5_2' class='none'>
+    <td class='failCase'><div class='testcase'>test_login_2: 手机号为空</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft5_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft5_2'>失败</button>
+    <div id='div_ft5_2' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft5_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft5_2'>失败</button>
+    <div id='div_ft5_2' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft5_2: 预期结果:  {'code': 1, 'msg': '手机号码为空'}
+实际结果:  {'code': 2, 'msg': '手机号码为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_register.py", line 94, in test_login
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_register.py", line 85, in test_login
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 1 != 2
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft5_3' class='none'>
+    <td class='failCase'><div class='testcase'>test_login_3: 密码为空</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft5_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft5_3'>失败</button>
+    <div id='div_ft5_3' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft5_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft5_3'>失败</button>
+    <div id='div_ft5_3' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft5_3: 预期结果:  {'code': 1, 'msg': '密码为空'}
+实际结果:  {'code': 2, 'msg': '密码为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_register.py", line 94, in test_login
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_register.py", line 85, in test_login
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 1 != 2
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt5_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_4: 手机号未注册</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt5_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_5: 密码错误</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt5_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_6: 手机号格式错误</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_register.TestRegister</td>
+    <td class="text-center">13</td>
+    <td class="text-center">13</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c6',13)" class="detail" id='c6'>详细</a></td>
+</tr>
+
+<tr id='pt6_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_01: 注册成功-带注册名</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt6_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_02: 成功-不带用户名</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt6_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_03: 不输入手机号</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt6_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_04: 手机号长度10位</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt6_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_05: 手机号长度12位</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt6_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_06: 手机号含有非法字符</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt6_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_07: 已注册过的手机号</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt6_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_08: 密码7位</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt6_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_09: 密码17位</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt6_10' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_10: 不输入密码</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt6_11' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_11: 注册名11位</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt6_12' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_12: 类型输入非0，1内容</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr id='pt6_13' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_13: 不输入类型</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+</tr>
+
+<tr class='failClass warning'>
+    <td>test_withdraw.TestWithdraw</td>
+    <td class="text-center">8</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center">8</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c7',8)" class="detail" id='c7'>详细</a></td>
+</tr>
+
+<tr id='ft7_1' class='none'>
+    <td class='failCase'><div class='testcase'>test_withdraw_1: 提现成功</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft7_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft7_1'>失败</button>
+    <div id='div_ft7_1' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft7_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft7_1'>失败</button>
+    <div id='div_ft7_1' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft7_1: 预期结果:  {'code': 0, 'msg': 'OK'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 76, in test_withdraw
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 0 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft7_2' class='none'>
+    <td class='failCase'><div class='testcase'>test_withdraw_2: 提现不成功-MemberId为空</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft7_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft7_2'>失败</button>
+    <div id='div_ft7_2' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft7_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft7_2'>失败</button>
+    <div id='div_ft7_2' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft7_2: 预期结果:  {'code': 1, 'msg': '会员id为空'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 76, in test_withdraw
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 1 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft7_3' class='none'>
+    <td class='failCase'><div class='testcase'>test_withdraw_3: 提现不成功-Amount为空</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft7_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft7_3'>失败</button>
+    <div id='div_ft7_3' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft7_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft7_3'>失败</button>
+    <div id='div_ft7_3' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft7_3: 预期结果:  {'code': 1, 'msg': '余额为空'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 76, in test_withdraw
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 1 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft7_4' class='none'>
+    <td class='failCase'><div class='testcase'>test_withdraw_4: 提现不成功-Amount为负值</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft7_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft7_4'>失败</button>
+    <div id='div_ft7_4' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft7_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft7_4'>失败</button>
+    <div id='div_ft7_4' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft7_4: 预期结果:  {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 76, in test_withdraw
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 2 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft7_5' class='none'>
+    <td class='failCase'><div class='testcase'>test_withdraw_5: 提现不成功-Amount大于500000</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft7_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft7_5'>失败</button>
+    <div id='div_ft7_5' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft7_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft7_5'>失败</button>
+    <div id='div_ft7_5' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft7_5: 预期结果:  {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 76, in test_withdraw
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 2 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft7_6' class='none'>
+    <td class='failCase'><div class='testcase'>test_withdraw_6: 提现不成功-Amount的小数位数多于2位</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft7_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft7_6'>失败</button>
+    <div id='div_ft7_6' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft7_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft7_6'>失败</button>
+    <div id='div_ft7_6' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft7_6: 预期结果:  {'code': 2, 'msg': '余额小数超过两位'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 76, in test_withdraw
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 2 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft7_7' class='none'>
+    <td class='failCase'><div class='testcase'>test_withdraw_7: 提现成功-Amount的小数位数1位</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft7_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft7_7'>失败</button>
+    <div id='div_ft7_7' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft7_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft7_7'>失败</button>
+    <div id='div_ft7_7' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft7_7: 预期结果:  {'code': 0, 'msg': 'OK'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 76, in test_withdraw
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 0 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft7_8' class='none'>
+    <td class='failCase'><div class='testcase'>test_withdraw_8: 提现成功-Amount的小数位数2位</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft7_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft7_8'>失败</button>
+    <div id='div_ft7_8' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft7_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft7_8'>失败</button>
+    <div id='div_ft7_8' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft7_8: 预期结果:  {'code': 0, 'msg': 'OK'}
+实际结果:  {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '验签失败，缺少timestamp参数'}
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\library\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 76, in test_withdraw
+    raise e
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+AssertionError: 0 != 1003
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
+    <td>52</td>
+    <td>17</td>
+    <td>17</td>
+    <td>18</td>
+    <td>通过率：32.69%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+
+</body>
+</html>

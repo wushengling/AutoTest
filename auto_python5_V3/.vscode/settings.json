@@ -12,6 +12,7 @@
         "pymysql",
         "pynput",
         "requset",
-        "sheng"
+        "sheng",
+        "strftime"
     ]
 }

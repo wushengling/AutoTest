@@ -2302,3 +2302,397 @@ AssertionError: 1 != 2
 2020-04-14 21:35:04,388 - [test_withdraw.py-->line:79] - INFO:用例:提现不成功-Amount的小数位数多于2位,执行通过
 2020-04-14 21:35:04,837 - [test_withdraw.py-->line:79] - INFO:用例:提现成功-Amount的小数位数1位,执行通过
 2020-04-14 21:35:05,277 - [test_withdraw.py-->line:79] - INFO:用例:提现成功-Amount的小数位数2位,执行通过
+2020-04-19 16:38:50,337 - [test_recharge.py-->line:81] - ERROR:用例:充值成功,执行未通过
+2020-04-19 16:38:50,338 - [test_recharge.py-->line:82] - ERROR:0 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1003
+2020-04-19 16:38:50,493 - [test_recharge.py-->line:81] - ERROR:用例:充值不成功-MemberId为空,执行未通过
+2020-04-19 16:38:50,493 - [test_recharge.py-->line:82] - ERROR:1 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != 1003
+2020-04-19 16:38:50,652 - [test_recharge.py-->line:81] - ERROR:用例:充值不成功-Amount为空,执行未通过
+2020-04-19 16:38:50,652 - [test_recharge.py-->line:82] - ERROR:1 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != 1003
+2020-04-19 16:38:50,860 - [test_recharge.py-->line:81] - ERROR:用例:充值不成功-Amount为负值,执行未通过
+2020-04-19 16:38:50,860 - [test_recharge.py-->line:82] - ERROR:2 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 2 != 1003
+2020-04-19 16:38:51,035 - [test_recharge.py-->line:81] - ERROR:用例:充值不成功-Amount大于500000,执行未通过
+2020-04-19 16:38:51,036 - [test_recharge.py-->line:82] - ERROR:2 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 2 != 1003
+2020-04-19 16:38:51,238 - [test_recharge.py-->line:81] - ERROR:用例:充值不成功-Amount的小数位数多于2位,执行未通过
+2020-04-19 16:38:51,239 - [test_recharge.py-->line:82] - ERROR:2 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 2 != 1003
+2020-04-19 16:38:51,596 - [test_recharge.py-->line:81] - ERROR:用例:充值成功-Amount的小数位数1位,执行未通过
+2020-04-19 16:38:51,597 - [test_recharge.py-->line:82] - ERROR:0 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1003
+2020-04-19 16:38:51,978 - [test_recharge.py-->line:81] - ERROR:用例:充值成功-Amount的小数位数2位,执行未通过
+2020-04-19 16:38:51,978 - [test_recharge.py-->line:82] - ERROR:0 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1003
+2020-04-19 16:38:52,155 - [test_register.py-->line:97] - INFO:用例:登录成功,执行通过
+2020-04-19 16:38:52,324 - [test_register.py-->line:91] - ERROR:用例:手机号为空,执行未通过
+2020-04-19 16:38:52,324 - [test_register.py-->line:92] - ERROR:1 != 2
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_register.py", line 85, in test_login
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != 2
+2020-04-19 16:38:52,477 - [test_register.py-->line:91] - ERROR:用例:密码为空,执行未通过
+2020-04-19 16:38:52,477 - [test_register.py-->line:92] - ERROR:1 != 2
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_register.py", line 85, in test_login
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != 2
+2020-04-19 16:38:52,802 - [test_register.py-->line:97] - INFO:用例:手机号未注册,执行通过
+2020-04-19 16:38:53,107 - [test_register.py-->line:97] - INFO:用例:密码错误,执行通过
+2020-04-19 16:38:53,282 - [test_register.py-->line:97] - INFO:用例:手机号格式错误,执行通过
+2020-04-19 16:38:54,100 - [test_register.py-->line:56] - INFO:用例:注册成功-带注册名,执行通过
+2020-04-19 16:38:54,870 - [test_register.py-->line:56] - INFO:用例:成功-不带用户名,执行通过
+2020-04-19 16:38:55,237 - [test_register.py-->line:56] - INFO:用例:不输入手机号,执行通过
+2020-04-19 16:38:55,604 - [test_register.py-->line:56] - INFO:用例:手机号长度10位,执行通过
+2020-04-19 16:38:56,019 - [test_register.py-->line:56] - INFO:用例:手机号长度12位,执行通过
+2020-04-19 16:38:56,393 - [test_register.py-->line:56] - INFO:用例:手机号含有非法字符,执行通过
+2020-04-19 16:38:56,975 - [test_register.py-->line:56] - INFO:用例:已注册过的手机号,执行通过
+2020-04-19 16:38:57,363 - [test_register.py-->line:56] - INFO:用例:密码7位,执行通过
+2020-04-19 16:38:57,734 - [test_register.py-->line:56] - INFO:用例:密码17位,执行通过
+2020-04-19 16:38:58,120 - [test_register.py-->line:56] - INFO:用例:不输入密码,执行通过
+2020-04-19 16:38:58,519 - [test_register.py-->line:56] - INFO:用例:注册名11位,执行通过
+2020-04-19 16:38:58,989 - [test_register.py-->line:56] - INFO:用例:类型输入非0，1内容,执行通过
+2020-04-19 16:38:59,842 - [test_register.py-->line:56] - INFO:用例:不输入类型,执行通过
+2020-04-19 16:39:00,397 - [test_withdraw.py-->line:74] - ERROR:用例:提现成功,执行未通过
+2020-04-19 16:39:00,398 - [test_withdraw.py-->line:75] - ERROR:0 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1003
+2020-04-19 16:39:00,558 - [test_withdraw.py-->line:74] - ERROR:用例:提现不成功-MemberId为空,执行未通过
+2020-04-19 16:39:00,558 - [test_withdraw.py-->line:75] - ERROR:1 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != 1003
+2020-04-19 16:39:00,722 - [test_withdraw.py-->line:74] - ERROR:用例:提现不成功-Amount为空,执行未通过
+2020-04-19 16:39:00,723 - [test_withdraw.py-->line:75] - ERROR:1 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != 1003
+2020-04-19 16:39:00,911 - [test_withdraw.py-->line:74] - ERROR:用例:提现不成功-Amount为负值,执行未通过
+2020-04-19 16:39:00,912 - [test_withdraw.py-->line:75] - ERROR:2 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 2 != 1003
+2020-04-19 16:39:01,080 - [test_withdraw.py-->line:74] - ERROR:用例:提现不成功-Amount大于500000,执行未通过
+2020-04-19 16:39:01,080 - [test_withdraw.py-->line:75] - ERROR:2 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 2 != 1003
+2020-04-19 16:39:01,236 - [test_withdraw.py-->line:74] - ERROR:用例:提现不成功-Amount的小数位数多于2位,执行未通过
+2020-04-19 16:39:01,236 - [test_withdraw.py-->line:75] - ERROR:2 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 2 != 1003
+2020-04-19 16:39:01,568 - [test_withdraw.py-->line:74] - ERROR:用例:提现成功-Amount的小数位数1位,执行未通过
+2020-04-19 16:39:01,568 - [test_withdraw.py-->line:75] - ERROR:0 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1003
+2020-04-19 16:39:01,863 - [test_withdraw.py-->line:74] - ERROR:用例:提现成功-Amount的小数位数2位,执行未通过
+2020-04-19 16:39:01,863 - [test_withdraw.py-->line:75] - ERROR:0 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1003
+2020-04-19 16:48:16,520 - [test_recharge.py-->line:81] - ERROR:用例:充值成功,执行未通过
+2020-04-19 16:48:16,520 - [test_recharge.py-->line:82] - ERROR:0 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1003
+2020-04-19 16:48:16,687 - [test_recharge.py-->line:81] - ERROR:用例:充值不成功-MemberId为空,执行未通过
+2020-04-19 16:48:16,687 - [test_recharge.py-->line:82] - ERROR:1 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != 1003
+2020-04-19 16:48:16,859 - [test_recharge.py-->line:81] - ERROR:用例:充值不成功-Amount为空,执行未通过
+2020-04-19 16:48:16,859 - [test_recharge.py-->line:82] - ERROR:1 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != 1003
+2020-04-19 16:48:17,021 - [test_recharge.py-->line:81] - ERROR:用例:充值不成功-Amount为负值,执行未通过
+2020-04-19 16:48:17,021 - [test_recharge.py-->line:82] - ERROR:2 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 2 != 1003
+2020-04-19 16:48:17,191 - [test_recharge.py-->line:81] - ERROR:用例:充值不成功-Amount大于500000,执行未通过
+2020-04-19 16:48:17,191 - [test_recharge.py-->line:82] - ERROR:2 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 2 != 1003
+2020-04-19 16:48:17,454 - [test_recharge.py-->line:81] - ERROR:用例:充值不成功-Amount的小数位数多于2位,执行未通过
+2020-04-19 16:48:17,454 - [test_recharge.py-->line:82] - ERROR:2 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 2 != 1003
+2020-04-19 16:48:17,777 - [test_recharge.py-->line:81] - ERROR:用例:充值成功-Amount的小数位数1位,执行未通过
+2020-04-19 16:48:17,777 - [test_recharge.py-->line:82] - ERROR:0 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1003
+2020-04-19 16:48:18,104 - [test_recharge.py-->line:81] - ERROR:用例:充值成功-Amount的小数位数2位,执行未通过
+2020-04-19 16:48:18,104 - [test_recharge.py-->line:82] - ERROR:0 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_recharge.py", line 69, in test_recharge
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1003
+2020-04-19 16:48:18,281 - [test_register.py-->line:97] - INFO:用例:登录成功,执行通过
+2020-04-19 16:48:18,554 - [test_register.py-->line:91] - ERROR:用例:手机号为空,执行未通过
+2020-04-19 16:48:18,554 - [test_register.py-->line:92] - ERROR:1 != 2
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_register.py", line 85, in test_login
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != 2
+2020-04-19 16:48:18,714 - [test_register.py-->line:91] - ERROR:用例:密码为空,执行未通过
+2020-04-19 16:48:18,714 - [test_register.py-->line:92] - ERROR:1 != 2
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_register.py", line 85, in test_login
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != 2
+2020-04-19 16:48:19,060 - [test_register.py-->line:97] - INFO:用例:手机号未注册,执行通过
+2020-04-19 16:48:19,413 - [test_register.py-->line:97] - INFO:用例:密码错误,执行通过
+2020-04-19 16:48:19,690 - [test_register.py-->line:97] - INFO:用例:手机号格式错误,执行通过
+2020-04-19 16:48:20,535 - [test_register.py-->line:56] - INFO:用例:注册成功-带注册名,执行通过
+2020-04-19 16:48:21,323 - [test_register.py-->line:56] - INFO:用例:成功-不带用户名,执行通过
+2020-04-19 16:48:21,769 - [test_register.py-->line:56] - INFO:用例:不输入手机号,执行通过
+2020-04-19 16:48:22,150 - [test_register.py-->line:56] - INFO:用例:手机号长度10位,执行通过
+2020-04-19 16:48:22,549 - [test_register.py-->line:56] - INFO:用例:手机号长度12位,执行通过
+2020-04-19 16:48:22,986 - [test_register.py-->line:56] - INFO:用例:手机号含有非法字符,执行通过
+2020-04-19 16:48:23,581 - [test_register.py-->line:56] - INFO:用例:已注册过的手机号,执行通过
+2020-04-19 16:48:24,001 - [test_register.py-->line:56] - INFO:用例:密码7位,执行通过
+2020-04-19 16:48:24,394 - [test_register.py-->line:56] - INFO:用例:密码17位,执行通过
+2020-04-19 16:48:24,771 - [test_register.py-->line:56] - INFO:用例:不输入密码,执行通过
+2020-04-19 16:48:25,171 - [test_register.py-->line:56] - INFO:用例:注册名11位,执行通过
+2020-04-19 16:48:25,552 - [test_register.py-->line:56] - INFO:用例:类型输入非0，1内容,执行通过
+2020-04-19 16:48:26,325 - [test_register.py-->line:56] - INFO:用例:不输入类型,执行通过
+2020-04-19 16:48:26,878 - [test_withdraw.py-->line:74] - ERROR:用例:提现成功,执行未通过
+2020-04-19 16:48:26,878 - [test_withdraw.py-->line:75] - ERROR:0 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1003
+2020-04-19 16:48:27,030 - [test_withdraw.py-->line:74] - ERROR:用例:提现不成功-MemberId为空,执行未通过
+2020-04-19 16:48:27,031 - [test_withdraw.py-->line:75] - ERROR:1 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != 1003
+2020-04-19 16:48:27,216 - [test_withdraw.py-->line:74] - ERROR:用例:提现不成功-Amount为空,执行未通过
+2020-04-19 16:48:27,216 - [test_withdraw.py-->line:75] - ERROR:1 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != 1003
+2020-04-19 16:48:27,367 - [test_withdraw.py-->line:74] - ERROR:用例:提现不成功-Amount为负值,执行未通过
+2020-04-19 16:48:27,368 - [test_withdraw.py-->line:75] - ERROR:2 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 2 != 1003
+2020-04-19 16:48:27,524 - [test_withdraw.py-->line:74] - ERROR:用例:提现不成功-Amount大于500000,执行未通过
+2020-04-19 16:48:27,524 - [test_withdraw.py-->line:75] - ERROR:2 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 2 != 1003
+2020-04-19 16:48:27,690 - [test_withdraw.py-->line:74] - ERROR:用例:提现不成功-Amount的小数位数多于2位,执行未通过
+2020-04-19 16:48:27,691 - [test_withdraw.py-->line:75] - ERROR:2 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 2 != 1003
+2020-04-19 16:48:27,998 - [test_withdraw.py-->line:74] - ERROR:用例:提现成功-Amount的小数位数1位,执行未通过
+2020-04-19 16:48:27,998 - [test_withdraw.py-->line:75] - ERROR:0 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1003
+2020-04-19 16:48:28,392 - [test_withdraw.py-->line:74] - ERROR:用例:提现成功-Amount的小数位数2位,执行未通过
+2020-04-19 16:48:28,392 - [test_withdraw.py-->line:75] - ERROR:0 != 1003
+Traceback (most recent call last):
+  File "c:\wsl\AutoTest\auto_python5_V3\testcases\test_withdraw.py", line 63, in test_withdraw
+    self.assertEqual(expected["code"],res["code"])
+  File "C:\python3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\python3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 0 != 1003

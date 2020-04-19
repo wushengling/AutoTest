@@ -11,7 +11,6 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from common.myconfig import conf
-
 """
 smtp服务器:
 smtp服务器地址:
